@@ -1,57 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You're Invited!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-    <style>
-        html, body { height: 100%; margin: 0; overflow: hidden; }
-        body { background: linear-gradient(135deg, #e9e4f0, #d3cce3); font-family: 'Poppins', sans-serif; font-weight: 300; color: #333; text-align: center; display: flex; align-items: center; justify-content: center; padding: 20px; }
-        .container { max-width: 680px; width: 100%; margin: 20px; padding: 30px 40px; background-color: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1); position: relative; z-index: 10; border-top: 8px solid #8e44ad; }
-        .header { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.3em; color: #5e3370; margin-bottom: 20px; line-height: 1.5; }
-        .names { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 3.2em; color: #8e44ad; margin: 15px 0; line-height: 1.2; }
-        .event-details-container { display: flex; justify-content: space-around; align-items: flex-start; margin-top: 25px; border-top: 1px solid #e0e0e0; padding-top: 25px; }
-        .event-section { flex-basis: 48%; }
-        .event-section h2 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.8em; color: #8e44ad; margin-bottom: 10px; }
-        .event-section p { font-size: 0.95em; line-height: 1.6; margin: 4px 0; color: #444; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ram & Pavi Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f8f0ff, #e0cffe);
+      color: #4a235a;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 60px auto;
+      background: #ffffffee;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .slogan {
+      font-size: 1.1em;
+      color: #8e44ad;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .header {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3em;
+      color: #5e3370;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .names {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 3.2em;
+      color: #8e44ad;
+      margin: 20px 0;
+    }
+
+    .event-details-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 25px;
+      border-top: 1px solid #d9c3ef;
+    }
+
+    .event-section {
+      flex: 1 1 45%;
+      padding: 20px;
+      border-radius: 12px;
+      background-color: #f4ecff;
+      box-shadow: 0 0 5px rgba(142, 68, 173, 0.1);
+    }
+
+    .event-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6em;
+      color: #7d3c98;
+      margin-bottom: 8px;
+    }
+
+    .event-section p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #4a235a;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      .event-details-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="slogan" style="font-size: 1em; font-weight: 400; color: #6c3483; margin-bottom: 10px;">
-            You're invited — our 7 years of love life ended here 💜
-          </div>
-        <div class="header">
-            With hearts brimming with love and gratitude, we, together with our families, warmly invite you to join us as we begin a beautiful new chapter in our lives. Your presence will add joy to our celebration as we unite in marriage. We can’t wait to share this special day with you!
-        </div>
-        <div class="names">Ram & Pavi</div>
-        <div class="event-details-container">
-            <div class="event-section">
-                <h2>Muhurtham</h2>
-                <p><strong>4th Septemper 2025</strong></p>
-                <p>4:00 AM to 6:00 AM</p>
-                <p><strong>Sivan Kovil</strong>, Sirugalappur</p>
-            </div>
-            <div class="event-section">
-                <h2>Reception</h2>
-                <p><strong>4th Septemper 2025</strong></p>
-                <p>8:00 AM onwards</p>
-                <p><strong>Sri Yogalakshmi Marriage Hall </strong>, Padalur</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="slogan">You're invited — our 7 years of love life ended here 💜</div>
+    <div class="header">
+      With hearts brimming with love and gratitude, we, together with our families, warmly invite you to join us as we begin a beautiful new chapter in our lives. Your presence will add joy to our celebration as we unite in marriage. We can’t wait to share this special day with you!
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeColors = ['#8e44ad', '#9b59b6', '#d7bde2', '#fcfaff'];
-            function fireGrandBlast() {
-                confetti({ particleCount: 400, spread: 180, startVelocity: 55, origin: { y: 0.6 }, zIndex: 1000, colors: themeColors, shapes: ['circle', 'square'], scalar: 1.2 });
-            }
-            fireGrandBlast();
+    <div class="names">Ram & Pavi</div>
+
+    <div class="event-details-container">
+      <div class="event-section">
+        <h2>Muhurtham</h2>
+        <p><strong>4th September 2025</strong></p>
+        <p>4:00 AM to 6:00 AM</p>
+        <p><strong>Sivan Kovil</strong>, Sirugalappur</p>
+      </div>
+      <div class="event-section">
+        <h2>Reception</h2>
+        <p><strong>4th September 2025</strong></p>
+        <p>8:00 AM onwards</p>
+        <p><strong>Sri Yogalakshmi Marriage Hall</strong>, Padalur</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Confetti Animation
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeColors = ['#d9b3ff', '#cba6f7', '#b388eb', '#e8daef', '#f5eef8'];
+      const duration = 5000;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 60,
+          origin: { x: 0 },
+          colors: themeColors,
         });
-    </script>
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 60,
+          origin: { x: 1 },
+          colors: themeColors,
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    });
+  </script>
 </body>
 </html>
