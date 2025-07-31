@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission Start</title>
+    <style>
+        /* CSS for the Hacker Terminal Look */
+        body { background-color: #000; color: #0dff00; font-family: 'Courier New', monospace; padding: 20px; }
+        #terminal { border: 1px solid #0dff00; padding: 15px; min-height: 90vh; }
+        p, label { margin: 5px 0; }
+        input[type="password"] { background-color: #000; color: #0dff00; border: 1px solid #0dff00; font-family: inherit; width: 250px; padding: 5px; }
+        input:focus { outline: none; box-shadow: 0 0 5px #0dff00; }
+        button { background: #0dff00; color: #000; border: 1px solid #0dff00; font-family: inherit; cursor: pointer; margin-left: 10px; padding: 5px 10px; }
+        .error { color: #ff0000; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <p>// CYBER ALLIANCE RECRUITMENT TERMINAL //</p>
+        <p>// PROVE YOUR SKILLS TO RECEIVE YOUR MISSION //</p>
+        <br>
+        <p id="password-hint"></p>
+        <form id="login-form">
+            <label for="password">PASSWORD:</label>
+            <input type="password" id="password" name="password" autofocus>
+            <button type="submit">> INITIATE</button>
+        </form>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script>
+        // --- CUSTOMIZE THIS LEVEL'S SETTINGS --- //   
+        const settings = {
+            missionCodename: 'aGVhcnRjb2Rl',
+        };
+        // --- END OF CUSTOMIZATION --- //
+
+        document.getElementById('password-hint').textContent = `Hint: The password is the operation's codename.`;
+
+        console.log(`// Welcome to the Cyber Alliance Recruitment Terminal. Your mission codename is: Phoenix.`);
+        
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password.toLowerCase() === atob(settings.missionCodename)) {
+                window.location.href = atob('ZGVjcnlwdC5odG1s');
+            } else {
+                document.getElementById('error-message').textContent = '// ERROR: AUTHENTICATION FAILED. //';
+            }
+        });
+    </script>
+</body>
+</html>

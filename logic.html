@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Level 4 - Logic</title>
+  <style> body { background: black; color: #00ff00; font-family: monospace; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; } </style>
+</head>
+<body>
+  <h1>CTF Level 4: Solve the Riddle</h1>
+  <p>The time is right. Somewhere.</p>
+  <input type="text" id="riddle" placeholder="Your answer">
+  <button onclick="check()">Submit</button>
+  <script>
+    function check() {
+
+      const hex = "30 34 2F 30 39 2F 32 30 32 35";
+      const text = hex.split(' ').map(h => String.fromCharCode(parseInt(h, 16))).join('');
+      if (document.getElementById('riddle').value.toLowerCase() === text) {
+        location.href = atob('aW52aXRhdGlvbi5odG1s');
+      } else alert("Wrong, try again.");
+    }
+  </script>
+</body>
+<span style="color: black;">04/09/2025</span>
+</html>

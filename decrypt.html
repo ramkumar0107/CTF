@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Decrypt</title>
+  <style> body { background: black; color: #00ff00; font-family: monospace; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; } </style>
+</head>
+<body>
+  <h1>CTF Level 2: Decode the hidden code</h1>
+  <input type="text" id="answer" placeholder="Your answer">
+  <button onclick="check()">Submit</button>
+  <script>
+
+    const morseToText = {
+        '.-': 'A',   '-...': 'B', '-.-.': 'C',
+        '-..': 'D',  '.': 'E',    '..-.': 'F',
+        '--.': 'G',  '....': 'H', '..': 'I',
+        '.---': 'J', '-.-': 'K',  '.-..': 'L',
+        '--': 'M',   '-.': 'N',   '---': 'O',
+        '.--.': 'P', '--.-': 'Q', '.-.': 'R',
+        '...': 'S',  '-': 'T',    '..-': 'U',
+        '...-': 'V', '.--': 'W',  '-..-': 'X',
+        '-.--': 'Y', '--..': 'Z',
+        '-----': '0', '.----': '1', '..---': '2',
+        '...--': '3', '....-': '4', '.....': '5',
+        '-....': '6', '--...': '7', '---..': '8',
+        '----.': '9',
+        '/': ' '  // Separator for words
+    };
+
+    function decodeMorse(morseCode) {
+    return morseCode
+        .trim()
+        .split(' ')
+        .map(code => morseToText[code] || '?') // Use '?' for unknown codes
+        .join('');
+    }
+
+    const textToMorse = {
+        'A': '.-',    'B': '-...',  'C': '-.-.', 
+        'D': '-..',   'E': '.',     'F': '..-.',
+        'G': '--.',   'H': '....',  'I': '..',
+        'J': '.---',  'K': '-.-',   'L': '.-..',
+        'M': '--',    'N': '-.',    'O': '---',
+        'P': '.--.',  'Q': '--.-',  'R': '.-.',
+        'S': '...',   'T': '-',     'U': '..-',
+        'V': '...-',  'W': '.--',   'X': '-..-',
+        'Y': '-.--',  'Z': '--..',
+        '0': '-----', '1': '.----', '2': '..---',
+        '3': '...--', '4': '....-', '5': '.....',
+        '6': '-....', '7': '--...', '8': '---..',
+        '9': '----.',
+        ' ': '/' // optional: word separator
+    };
+    function decodeMorse(morseCode) {
+        return morseCode
+            .trim()
+            .split(' ')
+            .map(code => morseToText[code] || '')
+            .join('');
+    }
+    function check() {
+        const value = document.getElementById('answer').value.toLowerCase();
+        const decodedvalue = decodeMorse('.-. . ..- -. .. --- -.').toLowerCase();
+      if (document.getElementById('answer').value.toLowerCase() === decodedvalue) {
+        location.href = atob('bGV2ZWwzLmh0bWw=');
+      } else alert("Wrong answer");
+    }
+  </script>
+</body>
+</html>
