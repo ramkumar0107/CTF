@@ -3,144 +3,222 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ram & Pavi Wedding Invitation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
+  <title>Ram & Pavi are Getting Married!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f8f0ff, #e0cffe);
-      color: #4a235a;
-      height: 100%;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(to right bottom, #f6f0ff, #e7d6ff);
+      color: #3e1c4b;
       overflow-x: hidden;
     }
 
     .container {
-      max-width: 720px;
+      max-width: 900px;
       margin: 60px auto;
-      background: #ffffffee;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      background: #fff;
+      padding: 60px 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
       text-align: center;
+      border: 2px solid #e2c6f5;
+      position: relative;
     }
 
     .slogan {
-      font-size: 1.1em;
-      color: #8e44ad;
-      margin-bottom: 10px;
-      font-weight: 500;
+      font-size: 1.4em;
+      font-weight: 400;
+      color: #a66bbe;
+      margin-bottom: 25px;
+      font-style: italic;
     }
 
     .header {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: 1.3em;
-      color: #5e3370;
-      margin-bottom: 20px;
-      line-height: 1.6;
+      font-size: 1.4em;
+      margin-bottom: 35px;
+      line-height: 1.7;
+      color: #6c2d80;
     }
 
     .names {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      font-size: 3.2em;
-      color: #8e44ad;
-      margin: 20px 0;
+ font-family: 'Apple Chancery', cursive, serif;
+font-size: 4.5em;
+background: linear-gradient(to right, #ffd700, #e6b422); /* brighter gold */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke: 0.2px violet; /* simple violet outline */
+margin-bottom: 10px;
+ text-shadow:
+ 0 0 4px rgba(186, 104, 200, 0.25), /* subtle violet halo */
+ 0 0 8px rgba(156, 39, 176, 0.2), /* soft outer glow */
+ 1px 1px 2px rgba(255, 215, 0, 0.5); /* gold highlight for visibility */
+}
+
+    /* .names {
+      font-family: 'Apple Chancery', cursive, serif;
+      font-size: 4.5em;
+      background: linear-gradient(to right, #d4af37, #b8860b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    } */
+
+    .subtext {
+      font-size: 1.2em;
+      color: #7a4a8d;
+      margin-bottom: 40px;
     }
 
     .event-details-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-      padding-top: 25px;
-      border-top: 1px solid #d9c3ef;
     }
 
     .event-section {
-      flex: 1 1 45%;
-      padding: 20px;
-      border-radius: 12px;
-      background-color: #f4ecff;
-      box-shadow: 0 0 5px rgba(142, 68, 173, 0.1);
+      flex: 1 1 300px;
+      max-width: 340px;
+      background: #fbf8ff;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid #e0cffe;
+      box-shadow: 0 8px 20px rgba(142, 68, 173, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(124, 58, 237, 0.1);
     }
 
     .event-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6em;
-      color: #7d3c98;
-      margin-bottom: 8px;
+      font-family: 'Apple Chancery', cursive, serif;
+      font-size: 2em;
+      color: #7a2e8a;
+      margin-bottom: 20px;
     }
 
     .event-section p {
-      font-size: 0.95em;
-      line-height: 1.5;
+      font-size: 1em;
+      margin: 10px 0;
       color: #4a235a;
-      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
 
-    @media (max-width: 600px) {
-      .event-details-container {
-        flex-direction: column;
+    .event-section .icon {
+      font-size: 1.1em;
+    }
+
+    .footer-note {
+      margin-top: 50px;
+      font-size: 1.1em;
+      font-style: italic;
+      color: #673c86;
+    }
+
+    .cta {
+      margin-top: 30px;
+      padding: 14px 28px;
+      font-size: 1em;
+      background: linear-gradient(to right, #b57edc, #9c27b0);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(156, 39, 176, 0.2);
+    }
+
+    .cta:hover {
+      background: #7b1fa2;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        margin: 30px 15px;
+        padding: 40px 20px;
+      }
+      .names {
+        font-size: 3em;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="slogan">You're invited — our 7 years of love life ended here 💜</div>
-    <div class="header">
-      With hearts brimming with love and gratitude, we, together with our families, warmly invite you to join us as we begin a beautiful new chapter in our lives. Your presence will add joy to our celebration as we unite in marriage. We can’t wait to share this special day with you!
-    </div>
+    <div class="slogan">After seven years of cherished secrets, our love story is ready to blossom in the sunlight!</div>
+    <div class="header">With hearts brimming with love and gratitude, we, together with our
+        families, warmly invite you to join us as we begin a beautiful new
+        chapter in our lives. Your presence will add joy to our celebration as
+        we unite in marriage. We can’t wait to share this special day with you!.</div>
     <div class="names">Ram & Pavi</div>
+    <div class="subtext">invite you to share the first day of our forever.</div>
 
     <div class="event-details-container">
       <div class="event-section">
         <h2>Muhurtham</h2>
-        <p><strong>4th September 2025</strong></p>
-        <p>4:00 AM to 6:00 AM</p>
-        <p><strong>Sivan Kovil</strong>, Sirugalappur</p>
+        <p><span class="icon">📅</span> 4th September 2025</p>
+        <p><span class="icon">⏰</span> 4:00 AM – 6:00 AM</p>
+        <p>
+            <span class="icon">📍</span>
+            <a href="https://maps.app.goo.gl/bEweFCf9k4MW2WLH6" target="_blank" style="color:#4a235a; text-decoration: none;">
+              <strong>Sivan Kovil</strong>, Sirugalappur
+            </a>
+        </p>
       </div>
       <div class="event-section">
         <h2>Reception</h2>
-        <p><strong>4th September 2025</strong></p>
-        <p>8:00 AM onwards</p>
-        <p><strong>Sri Yogalakshmi Marriage Hall</strong>, Padalur</p>
+        <p><span class="icon">📅</span> 4th September 2025</p>
+        <p><span class="icon">⏰</span> 8:00 AM onwards</p>
+        <p>
+            <span class="icon">📍</span>
+            <a href="https://maps.app.goo.gl/vULk9LMCmNfZYk9J6" target="_blank" style="color:#4a235a; text-decoration: none;">
+              <strong>Sri Yogalakshmi Marriage Hall</strong>, Padalur
+            </a>
+          </p>
+          
       </div>
     </div>
+
+    <div class="footer-note">Looking forward to celebrating with you!</div>
   </div>
 
   <script>
-    // Confetti Animation
     document.addEventListener('DOMContentLoaded', function () {
-      const themeColors = ['#d9b3ff', '#cba6f7', '#b388eb', '#e8daef', '#f5eef8'];
-      const duration = 5000;
-      const end = Date.now() + duration;
+    const themeColors = ['#d4af37', '#c8a2c8', '#b57edc', '#dda0dd']; // Gold & Violet shades
+    const duration = 5000;
+    const end = Date.now() + duration;
 
-      (function frame() {
-        confetti({
-          particleCount: 3,
-          angle: 60,
-          spread: 60,
-          origin: { x: 0 },
-          colors: themeColors,
-        });
-        confetti({
-          particleCount: 3,
-          angle: 120,
-          spread: 60,
-          origin: { x: 1 },
-          colors: themeColors,
-        });
+    (function frame() {
+      confetti({
+        particleCount: 4,
+        angle: 60,
+        spread: 100,
+        origin: { x: 0 },
+        shapes: ["heart"],
+        colors: themeColors,
+      });
+      confetti({
+        particleCount: 4,
+        angle: 120,
+        spread: 100,
+        origin: { x: 1 },
+        shapes: ["heart"],
+        colors: themeColors,
+      });
 
-        if (Date.now() < end) {
-          requestAnimationFrame(frame);
-        }
-      })();
-    });
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  });
   </script>
 </body>
 </html>
